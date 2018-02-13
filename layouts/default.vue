@@ -53,17 +53,34 @@ figure > img {
   max-width:100%;
 }
 
-@media only screen and (min-width: 769px) {
+@media only screen and (max-width: 414px) {
+  section.container {
+    max-width:100%;
+    padding:5px!important;
+  }
+}
+@media only screen and (min-width: 415px) and (max-width: 767px) {
+  section.container {
+    max-width:100%;
+    padding:10px 100px;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  section.container {
+    max-width:100%;
+    padding:10px 150px;
+  }
+}
+@media only screen and (min-width: 1025px) and (max-width: 1365px) {
+  section.container {
+    max-width:100%;
+    padding:10px 250px;
+  }
+}
+@media only screen and (min-width: 1366px) {
   section.container {
     max-width:100%;
     padding:10px 500px;
-  }
-}
-
-@media only screen and (max-width: 768px) {
-  section.container {
-    max-width:100%;
-    padding:10px!important;
   }
 }
 </style>
