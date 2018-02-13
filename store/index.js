@@ -3,6 +3,7 @@ import Vuex from 'vuex'
 const Store = () => {
   return new Vuex.Store({
     state: {
+        dataInit: null
     },
     getters: {
       API () {
@@ -10,24 +11,27 @@ const Store = () => {
       }
     },
     mutations: {
+        loadDataInit (state, data) {
+          state.dataInit = data
+        },
     },
     actions: {
         async nuxtServerInit ({commit}, {app, store, route, params, query}) {
-        if (process.server) {
-            switch (route.name) {
-                case 'index':
-                await app.$axios.$get(store.getters.API)
-                    .then((res) => {
-                        console.log(res.data)
-                    })
-                    .catch(e => {
-                    console.log('E: ServerInit - ' + e.message)
-                    })
-                break
-                default:
-                break
+            if (process.server) {
+                switch (route.name) {
+                    case 'index':
+                    await app.$axios.$get(store.getters.API)
+                        .then((res) => {
+                            commit('loadDataInit', res)
+                        })
+                        .catch(e => {
+                        console.log('E: ServerInit - ' + e.message)
+                        })
+                    break
+                    default:
+                    break
+                }
             }
-        }
         }
     }
   })

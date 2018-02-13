@@ -3,11 +3,13 @@ module.exports = {
   ** Headers of the page
   */
   head: {
-    title: 'nuxtjs_id',
+    title: 'NuxtJs - PWA Challenge',
     meta: [
       { charset: 'utf-8' },
-      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: 'NuxtJs Indonesia' }
+      { name: 'viewport', content: 'width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' },
+      { 'http-equiv': 'X-UA-Compatible', content: 'IE=edge,chrome=1' },
+      { hid: 'keywords', name: 'keywords', content: '' },
+      { hid: 'description', name: 'description', content: '' },
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
