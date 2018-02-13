@@ -11,6 +11,9 @@ module.exports = {
       { hid: 'keywords', name: 'keywords', content: 'nuxtjs,pwa,pwa challenge,indonesia,vue,vuejs' },
       { hid: 'description', name: 'description', content: 'NuxtJs - Indonesia. PWA Challenge. VueJs' },
     ],
+    noscript: [
+      { innerHTML: 'Body No Scripts', body: true }
+    ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
       { rel: 'manifest', href: '/manifest.webmanifest' }
