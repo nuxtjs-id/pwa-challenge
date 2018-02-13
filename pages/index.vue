@@ -52,7 +52,7 @@ html {
 }
 .feed-content > div.headline {
   margin:10px 0px;
-  color:#a0a0a0;
+  color:#555;
   font-size:14px;
   letter-spacing:.5px;
 }

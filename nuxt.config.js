@@ -6,7 +6,7 @@ module.exports = {
     title: 'NuxtJs - PWA Challenge',
     meta: [
       { charset: 'utf-8' },
-      { name: 'viewport', content: 'width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' },
+      { name: 'viewport', content: 'width=device-width, initial-scale=1, maximum-scale=1' },
       { 'http-equiv': 'X-UA-Compatible', content: 'IE=edge,chrome=1' },
       { hid: 'keywords', name: 'keywords', content: 'nuxtjs,pwa,pwa challenge,indonesia,vue,vuejs' },
       { hid: 'description', name: 'description', content: 'NuxtJs - Indonesia. PWA Challenge. VueJs' },
