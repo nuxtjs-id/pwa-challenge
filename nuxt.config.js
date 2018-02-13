@@ -36,7 +36,7 @@ module.exports = {
   },
   workbox: {
     importScripts: [
-      'sw.js'
+      'custom-sw.js'
     ],
     runtimeCaching: [
       {

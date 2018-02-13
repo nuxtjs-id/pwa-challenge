@@ -21,7 +21,6 @@ export default {
   mounted () {
     var _self = this
     _self.dataFeed = this.$store.state.dataInit
-    console.log(_self.dataFeed)
   }
 }
 </script>

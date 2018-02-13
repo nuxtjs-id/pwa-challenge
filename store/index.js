@@ -25,7 +25,7 @@ const Store = () => {
                             commit('loadDataInit', res)
                         })
                         .catch(e => {
-                        console.log('E: ServerInit - ' + e.message)
+                            console.log('E: ServerInit - ' + e.message)
                         })
                     break
                     default:
