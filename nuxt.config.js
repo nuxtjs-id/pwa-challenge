@@ -23,7 +23,8 @@ module.exports = {
   ** Build configuration
   */
   modules: [
-    '@nuxtjs/axios',
+    '@nuxtjs/pwa',
+    '@nuxtjs/axios'
   ],
   axios: {
     // proxyHeaders: false
