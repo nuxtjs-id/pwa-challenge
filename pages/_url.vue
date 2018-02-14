@@ -1,6 +1,6 @@
 <template>
-  <section class="container">
-    <div v-if="$store.state.dataInit">
+  <section class="container" v-if="$store.state.dataInit">
+    <div v-if="dataFeed">
       <div class="feed-content shadow" v-if="$store.state.activeContent === 0 || $store.state.activeContent > 0">
         <div class="thumbnail">
             <nuxt-lazy-load
@@ -31,11 +31,4 @@ export default {
   }
 }
 </script>
-
-<style scoped>
-.feed-content > div.title {
-  font-size:20px!important;
-  line-height: 150%;
-}
-</style>
 

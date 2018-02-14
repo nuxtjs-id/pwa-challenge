@@ -30,13 +30,12 @@ module.exports = {
     '@nuxtjs/pwa',
     '@nuxtjs/axios'
   ],
+  css: [
+    './static/css/style.css'
+  ],
   plugins: ['~/plugins/components.js'],
   axios: {
     // proxyHeaders: false
-  },
-  manifest: {
-    name: 'NuxtJs - PWA',
-    lang: 'id'
   },
   workbox: {
     importScripts: [

@@ -1,10 +1,10 @@
 <template>
-  <section class="container">
+  <section class="container" v-if="$store.state.dataInit">
     <div class="nuxt-navbar shadow">
       <span class="main-title">{{ $store.state.dataInit.feed.title }}</span>
       <span class="btn-search"><img src="/images/ic-search.png" style="width:100%;" alt="search"></span>
     </div>
-    <div v-if="$store.state.dataInit">
+    <div v-if="dataFeed">
       <div class="feed-content shadow" v-for="(v, i) in dataFeed.items" :key="i">
         <div class="thumbnail">
             <nuxt-lazy-load
@@ -33,7 +33,7 @@
 export default {
   data () {
     return {
-      dataFeed: []
+      dataFeed: null
     }
   },
   mounted () {

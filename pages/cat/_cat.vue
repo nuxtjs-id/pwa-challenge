@@ -1,10 +1,10 @@
 <template>
-  <section class="container">
+  <section class="container" v-if="$store.state.dataInit">
     <div class="nuxt-navbar shadow">
-      <span class="main-title" v-if="$store.state.dataInit">{{ $store.state.dataInit.feed.title }}</span>
+      <span class="main-title">{{ $store.state.dataInit.feed.title }}</span>
       <span class="btn-search"><img src="/images/ic-search.png" style="width:100%;" alt="search"></span>
     </div>
-    <div v-if="$store.state.dataInit">
+    <div v-if="dataFeed">
       <div class="feed-content shadow" v-for="(v, i) in dataFilters" :key="i">
         <div class="thumbnail">
             <nuxt-lazy-load
@@ -18,7 +18,7 @@
             ></nuxt-lazy-load>
             <div class="clearfix"></div>
         </div>
-        <div class="title">{{ v.title }}</div>
+        <div class="title c">{{ v.title }}</div>
         <div class="headline"><span class="author" v-html="v.author"></span><span class="pub-date" v-html="v.pubDate"></span></div>
         <div class="description" v-show="false" v-html="v.description"></div>
         <div class="categories">
@@ -33,7 +33,7 @@
 export default {
   data () {
     return {
-      dataFilters: []
+      dataFilters: null
     }
   },
   mounted () {
