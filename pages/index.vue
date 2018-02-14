@@ -2,9 +2,9 @@
   <section class="container">
     <div class="nuxt-navbar shadow">
       <span class="main-title">{{ $store.state.dataInit.feed.title }}</span>
-      <span class="btn-search"><img src="/images/ic-search.png" style="width:100%;"></span>
+      <span class="btn-search"><img src="/images/ic-search.png" style="width:100%;" alt="search"></span>
     </div>
-    <div>
+    <div v-if="$store.state.dataInit">
       <div class="feed-content shadow" v-for="(v, i) in dataFeed.items" :key="i">
         <div class="thumbnail">
             <nuxt-lazy-load
@@ -13,6 +13,7 @@
               :img-key="'content-' + i"
               :url="'url'"
               :slug="i"
+              :title="v.title"
               :add-class="'img-box75'"
             ></nuxt-lazy-load>
             <div class="clearfix"></div>

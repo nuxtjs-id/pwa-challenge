@@ -19,7 +19,6 @@ export default {
           _self.$store.state.activeContent = parseInt(_self.$route.params.url)
           break
       }
-      console.log(_self.$store.state.dataInit)
     }
   }
 }
@@ -88,11 +87,10 @@ body {
 }
 .feed-content > div.headline {
   margin:10px 0px;
-  color:#999;
+  color:#555;
   font-size:14px;
   letter-spacing:.5px;
   padding:0px 5px;
-  text-shadow:0px -1px 0px #aaa;
 }
 .feed-content > div.headline > span.pub-date {
   float:right;

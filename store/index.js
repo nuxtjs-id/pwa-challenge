@@ -17,7 +17,7 @@ const Store = () => {
         },
     },
     actions: {
-        async nuxtServerInit ({commit}, {app, store, route, params, query}) {
+        async nuxtServerInit ({commit}, {app, store}) {
             if (process.server) {
                 await app.$axios.$get(store.getters.API)
                     .then((res) => {

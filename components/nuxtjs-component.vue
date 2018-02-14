@@ -1,6 +1,7 @@
 <template>
   <router-link
     class="d-block"
+    :aria-label="title"
     :to="{ name: url, params: { url: slug } }"
   >
     <div
@@ -13,7 +14,7 @@
 
 <script>
 export default {
-  props: ['imgThumb', 'imgKey', 'img', 'url', 'slug', 'addClass'],
+  props: ['imgThumb', 'imgKey', 'img', 'url', 'slug', 'title', 'addClass'],
   mounted () {
     var _self = this
     var el = document.querySelector('.nuxt-loader-' + _self.imgKey)

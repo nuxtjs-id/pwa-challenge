@@ -1,6 +1,6 @@
 <template>
   <section class="container">
-    <div>
+    <div v-if="$store.state.dataInit">
       <div class="feed-content shadow" v-if="$store.state.activeContent === 0 || $store.state.activeContent > 0">
         <div class="thumbnail">
             <nuxt-lazy-load
@@ -8,6 +8,7 @@
               :img="$store.state.dataInit.items[$store.state.activeContent].thumbnail"
               :img-key="'content-' + $store.state.activeContent"
               :url="'url'"
+              :title="$store.state.dataInit.items[$store.state.activeContent].title"
               :slug="$store.state.activeContent"
               :add-class="'img-box75'"
             ></nuxt-lazy-load>
