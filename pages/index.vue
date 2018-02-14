@@ -1,5 +1,9 @@
 <template>
   <section class="container">
+    <div class="nuxt-navbar shadow">
+      <span class="main-title">{{ $store.state.dataInit.feed.title }}</span>
+      <span class="btn-search"><img src="/images/ic-search.png" style="width:100%;"></span>
+    </div>
     <div>
       <div class="feed-content shadow" v-for="(v, i) in dataFeed.items" :key="i">
         <div class="thumbnail">

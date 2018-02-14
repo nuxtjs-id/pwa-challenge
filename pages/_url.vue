@@ -22,6 +22,15 @@
   </section>
 </template>
 
+<script>
+export default {
+  mounted () {
+    var _self = this
+    _self.$store.state.activeContent = parseInt(_self.$route.params.url)
+  }
+}
+</script>
+
 <style scoped>
 .feed-content > div.title {
   font-size:20px!important;

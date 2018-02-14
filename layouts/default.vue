@@ -12,7 +12,6 @@ export default {
         _self.$store.state.activeContent = null
       } else {
         _self.$store.state.activeContent = parseInt(_self.$route.params.url)
-        console.log(_self.$store.state.dataInit)
       }
     }
   }
@@ -31,6 +30,33 @@ body {
 #__nuxt {
   font-family: "Open Sans",-apple-system,system-ui,BlinkMacSystemFont,"Helvetica Neue",Arial,sans-serif !important;
   letter-spacing:.3px;
+}
+.nuxt-navbar {
+  position:relative;
+  width:100%;
+  padding:12px 15px;
+  padding-top:15px;
+  color:#ddd;
+  text-transform: uppercase;
+  text-shadow: 0 -1px 0px #fff;
+  border-radius:5px;
+  background:#000;
+  box-sizing:border-box;
+  margin-bottom:10px;
+  margin-top:-15px;
+}
+.main-title {
+  font-size:14px;
+  letter-spacing:3px;
+}
+.btn-search {
+  position:absolute;
+  right:3px;
+  top:5px;
+  display:block;
+  padding:12px;
+  width:20px;
+  cursor:pointer;
 }
 .feed-content {
   padding:10px 10px;
@@ -132,6 +158,14 @@ figure > img {
     max-width:100%;
     padding:3px!important;
   }
+  .nuxt-navbar {
+    margin-top:-6px;
+  }
+  .btn-search {
+    position:absolute;
+    right:3px;
+    top:0px;
+  }
   .feed-content > div.title {
     font-size:18px;
   }
@@ -140,6 +174,14 @@ figure > img {
   section.container {
     max-width:100%;
     padding:3px 100px;
+  }
+  .nuxt-navbar {
+    margin-top:-6px;
+  }
+  .btn-search {
+    position:absolute;
+    right:3px;
+    top:0px;
   }
   .feed-content > div.title {
     font-size:18px;
