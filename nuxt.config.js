@@ -30,6 +30,7 @@ module.exports = {
     '@nuxtjs/pwa',
     '@nuxtjs/axios'
   ],
+  plugins: ['~/plugins/components.js'],
   axios: {
     // proxyHeaders: false
   },
