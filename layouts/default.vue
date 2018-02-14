@@ -4,6 +4,19 @@
   </div>
 </template>
 <script>
+export default {
+  watch: {
+    '$route': function (newRoute, oldRoute) {
+      var _self = this
+      if (newRoute.name === 'index') {
+        _self.$store.state.activeContent = null
+      } else {
+        _self.$store.state.activeContent = parseInt(_self.$route.params.url)
+        console.log(_self.$store.state.dataInit)
+      }
+    }
+  }
+}
 </script>
 
 <style>
@@ -21,7 +34,7 @@ body {
 }
 .feed-content {
   padding:10px 10px;
-  margin-bottom:5px;
+  margin-bottom:10px;
   border-bottom:solid 1px #eee;
   background:#fff;
   border-radius:5px;
@@ -35,25 +48,42 @@ body {
 }
 .feed-content > div.title {
   font-weight: bold;
-  font-size:16px;
+  font-size:20px;
   margin-top:7px;
   padding:3px 5px;
+  letter-spacing:0px;
 }
 .feed-content > div.headline {
   margin:10px 0px;
   color:#999;
-  font-style: italic;
   font-size:14px;
   letter-spacing:.5px;
   padding:0px 5px;
+  text-shadow:0px -1px 0px #aaa;
 }
 .feed-content > div.headline > span.pub-date {
   float:right;
   font-size:12px;
   letter-spacing:.5px;
 }
+.feed-content > div.categories {
+  font-size:14px;
+  letter-spacing:.3px;
+  padding:0px 5px;
+  color:#ff5555;
+}
 .feed-content > div.description {
-  display:none;
+
+}
+.feed-content > div.description {
+  padding:0px 7px;
+  font-size:18px;
+  word-wrap: break-word;
+  line-height: 145%;
+}
+.feed-content > div.description a {
+  text-decoration: none!important;
+  color:#3B8070;
 }
 .d-block {
   display:block;
@@ -61,7 +91,7 @@ body {
 }
 .img-box75{
     width: 100%;
-    padding-bottom: 74.9%;
+    padding-bottom: 55%;
     margin: 0;
     border-radius:5px;
     background-position: center center;
@@ -79,11 +109,11 @@ body {
 [class*='nuxt-loader'] {
     background-color: #fafafa !important;
     opacity: .3;
-    -webkit-transition: opacity .7s linear;
-    transition: opacity .7s linear;
-    -moz-transition: opacity .7s linear;
-    -ms-transition: opacity .7s linear;
-    -o-transition: opacity .7s linear;
+    -webkit-transition: opacity .3s linear;
+    transition: opacity .3s linear;
+    -moz-transition: opacity .3s linear;
+    -ms-transition: opacity .3s linear;
+    -o-transition: opacity .3s linear;
 }
 
 [class*='nuxt-loader'].loaded {
@@ -102,11 +132,17 @@ figure > img {
     max-width:100%;
     padding:3px!important;
   }
+  .feed-content > div.title {
+    font-size:18px;
+  }
 }
 @media only screen and (min-width: 415px) and (max-width: 767px) {
   section.container {
     max-width:100%;
     padding:3px 100px;
+  }
+  .feed-content > div.title {
+    font-size:18px;
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
@@ -118,13 +154,13 @@ figure > img {
 @media only screen and (min-width: 1025px) and (max-width: 1365px) {
   section.container {
     max-width:100%;
-    padding:10px 250px;
+    padding:10px 270px;
   }
 }
 @media only screen and (min-width: 1366px) {
   section.container {
     max-width:100%;
-    padding:10px 500px;
+    padding:10px 450px;
   }
 }
 .clearfix:after,

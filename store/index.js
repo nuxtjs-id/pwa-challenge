@@ -3,7 +3,8 @@ import Vuex from 'vuex'
 const Store = () => {
   return new Vuex.Store({
     state: {
-        dataInit: null
+        dataInit: null,
+        activeContent: null
     },
     getters: {
       API () {
@@ -18,19 +19,13 @@ const Store = () => {
     actions: {
         async nuxtServerInit ({commit}, {app, store, route, params, query}) {
             if (process.server) {
-                switch (route.name) {
-                    case 'index':
-                    await app.$axios.$get(store.getters.API)
-                        .then((res) => {
-                            commit('loadDataInit', res)
-                        })
-                        .catch(e => {
-                            console.log('E: ServerInit - ' + e.message)
-                        })
-                    break
-                    default:
-                    break
-                }
+                await app.$axios.$get(store.getters.API)
+                    .then((res) => {
+                        commit('loadDataInit', res)
+                    })
+                    .catch(e => {
+                        console.log('E: ServerInit - ' + e.message)
+                    })
             }
         }
     }
