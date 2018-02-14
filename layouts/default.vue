@@ -8,11 +8,18 @@ export default {
   watch: {
     '$route': function (newRoute, oldRoute) {
       var _self = this
-      if (newRoute.name === 'index') {
-        _self.$store.state.activeContent = null
-      } else {
-        _self.$store.state.activeContent = parseInt(_self.$route.params.url)
+      switch (newRoute.name) {
+        case 'index':
+          _self.$store.state.activeContent = null
+          break
+        case 'cat-cat':
+          _self.$store.state.activeContent = null
+          break
+        default:
+          _self.$store.state.activeContent = parseInt(_self.$route.params.url)
+          break
       }
+      console.log(_self.$store.state.dataInit)
     }
   }
 }
@@ -94,12 +101,12 @@ body {
 }
 .feed-content > div.categories {
   font-size:14px;
-  letter-spacing:.3px;
   padding:0px 5px;
-  color:#ff5555;
+  color:#3B8070;
 }
-.feed-content > div.description {
-
+.feed-content > div.categories a {
+  color:#3B8070;
+  text-decoration: none;
 }
 .feed-content > div.description {
   padding:0px 7px;

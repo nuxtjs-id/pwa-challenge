@@ -5,7 +5,7 @@
       <span class="btn-search"><img src="/images/ic-search.png" style="width:100%;"></span>
     </div>
     <div>
-      <div class="feed-content shadow" v-for="(v, i) in dataFeed.items" :key="i">
+      <div class="feed-content shadow" v-for="(v, i) in dataFilters" :key="i">
         <div class="thumbnail">
             <nuxt-lazy-load
               :img-thumb="'/images/nuxt-preloader.jpg'"
@@ -32,12 +32,24 @@
 export default {
   data () {
     return {
-      dataFeed: []
+      dataFilters: []
     }
   },
   mounted () {
-    var _self = this
-    _self.dataFeed = _self.$store.state.dataInit
+    let _self = this
+    _self.dataFilters = _self.$store.state.dataInit.items
+    if (_self.$route.params.cat) {
+        let i
+        let filteredItems = []
+        for (i = 0; i < _self.dataFilters.length; i++) {
+            if (_self.dataFilters[i].categories.some(c => c === _self.$route.params.cat)) {
+                filteredItems.push(_self.dataFilters[i])
+            }
+        }
+        _self.dataFilters = filteredItems
+    } else {
+        _self.$router.replace('/')
+    }
   }
 }
 </script>
