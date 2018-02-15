@@ -1,6 +1,9 @@
-# nuxtjs_id
+# NuxtJs_id - WWWID PWA Challenge
 
-> NuxtJs Indonesia
+> Latihan Iterasi Instant Loading SSR (Versatile VueJs) ...
+>> NuxtJs (VueJs, dkk)
+>> SSR (+Api Request)
+>> Minus - http2, https auto redirect, optimasi image load, heroku gratisan :D
 
 ## Build Setup
 
