@@ -28,7 +28,8 @@ module.exports = {
   */
   modules: [
     '@nuxtjs/pwa',
-    '@nuxtjs/axios'
+    '@nuxtjs/axios',
+    '@nuxtjs/component-cache'
   ],
   plugins: ['~/plugins/components.js'],
   axios: {
