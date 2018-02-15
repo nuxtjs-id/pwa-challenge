@@ -11,8 +11,15 @@ html {
     font-family: "Open Sans",-apple-system,system-ui,BlinkMacSystemFont,"Helvetica Neue",Arial,sans-serif !important;
     letter-spacing:.3px;
   }
-  .nuxt-navbar {
+  .container {
     position:relative;
+    padding-top:58px!important;
+  }
+  .p-relative {
+    position:relative;
+  }
+  .nuxt-navbar {
+    position:absolute;
     width:100%;
     padding:12px 15px;
     padding-top:15px;
@@ -23,7 +30,8 @@ html {
     background:#000;
     box-sizing:border-box;
     margin-bottom:10px;
-    margin-top:-15px;
+    margin-top:-63px;
+    box-sizing: border-box;
   }
   .main-title {
     font-size:14px;
@@ -139,10 +147,9 @@ html {
   @media only screen and (max-width: 414px) {
     section.container {
       max-width:100%;
-      padding:3px!important;
-    }
-    .nuxt-navbar {
-      margin-top:-6px;
+      padding-left:3px!important;
+      padding-right:3px!important;
+      padding-bottom:3px!important;
     }
     .btn-search {
       position:absolute;
@@ -156,10 +163,9 @@ html {
   @media only screen and (min-width: 415px) and (max-width: 767px) {
     section.container {
       max-width:100%;
-      padding:3px 100px;
-    }
-    .nuxt-navbar {
-      margin-top:-6px;
+      padding-left:100px!important;
+      padding-right:100px!important;
+      padding-bottom:3px!important;
     }
     .btn-search {
       position:absolute;
@@ -173,19 +179,25 @@ html {
   @media only screen and (min-width: 768px) and (max-width: 1024px) {
     section.container {
       max-width:100%;
-      padding:10px 150px;
+      padding-left:150px!important;
+      padding-right:150px!important;
+      padding-bottom:10px!important;
     }
   }
   @media only screen and (min-width: 1025px) and (max-width: 1365px) {
     section.container {
       max-width:100%;
-      padding:10px 270px;
+      padding-left:270px!important;
+      padding-right:270px!important;
+      padding-bottom:10px!important;
     }
   }
   @media only screen and (min-width: 1366px) {
     section.container {
       max-width:100%;
-      padding:10px 450px;
+      padding-left:450px!important;
+      padding-right:450px!important;
+      padding-bottom:10px!important;
     }
   }
   .clearfix:after,

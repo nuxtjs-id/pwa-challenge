@@ -4,11 +4,12 @@
     :aria-label="title"
     :to="{ name: url, params: { url: slug } }"
   >
-    <div
+    <span
+      class="d-block"
       :class="[addClass, 'nuxt-loader-' + imgKey]"
       :style="{'background-image': 'url(' + imgThumb + ')'}"
-    ></div>
-    <div class="clearfix"></div>
+    ></span>
+    <span class="clearfix"></span>
   </router-link>
 </template>
 
