@@ -17,14 +17,14 @@
               :slug="v.slug"
               :title="v.title"
               :add-class="'img-box75'"
-            ></nuxt-lazy-load>
+            />
         </div>
         <div class="title">{{ v.title }}</div>
         <div class="headline"><span class="author" v-html="v.author"></span><span class="pub-date" v-html="v.pubDate"></span></div>
-        <div class="description" v-html="v.desc"></div>
         <div class="categories">
           <nuxt-link v-for="(y, a) in v.categories" :key="a" :to="{name: 'cat-cat', params: {cat: y}}">{{ y.replace(/\-/g, ' ').trim() }}<span v-if="a < v.categories.length - 1">, </span></nuxt-link>
         </div>
+        <div class="description" v-html="v.desc"></div>
       </div>
     </div>
   </section>

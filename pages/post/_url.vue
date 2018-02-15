@@ -17,10 +17,9 @@
               :title="content.title"
               :slug="content.slug"
               :add-class="'img-box75'"
-            ></nuxt-lazy-load>
-            <div class="clearfix"></div>
+            />
         </div>
-        <div class="title">{{ content.title }}</div>
+        <div class="title c">{{ content.title }}</div>
         <div class="headline"><span class="author" v-html="content.author"></span><span class="pub-date" v-html="content.pubDate"></span></div>
         <div class="categories">pwa, website, modern web</div>
         <div class="description" v-html="content.description"></div>
