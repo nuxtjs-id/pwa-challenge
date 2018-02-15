@@ -1,5 +1,5 @@
 <template>
-  <section class="container" v-if="$store.state.dataInit">
+  <main class="container" v-if="$store.state.dataInit">
     <div class="p-relative">
       <div class="nuxt-navbar shadow">
         <span class="main-title">{{ $store.state.dataInit.feed.title }}</span>
@@ -25,7 +25,7 @@
         <div class="description" v-html="content.description"></div>
       </div>
     </div>
-  </section>
+  </main>
 </template>
 
 <script>

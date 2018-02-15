@@ -34,7 +34,7 @@ html {
     box-sizing: border-box;
   }
   .main-title {
-    font-size:14px;
+    font-size:16px;
     letter-spacing:3px;
   }
   .btn-search {
@@ -62,29 +62,29 @@ html {
   }
   .feed-content > div.title {
     font-weight: bold;
-    font-size:20px;
+    font-size:22px;
     margin-top:7px;
     padding:3px 5px;
     letter-spacing:0px;
   }
   .feed-content > div.title.c {
-    font-size:20px!important;
+    font-size:22px!important;
     line-height: 150%;
   }
   .feed-content > div.headline {
     margin:10px 0px;
     color:#555;
-    font-size:14px;
+    font-size:16px;
     letter-spacing:.5px;
     padding:0px 5px;
   }
   .feed-content > div.headline > span.pub-date {
     float:right;
-    font-size:12px;
+    font-size:16px;
     letter-spacing:.5px;
   }
   .feed-content > div.categories {
-    font-size:14px;
+    font-size:16px;
     padding:0px 5px;
     color:#3B8070;
   }
@@ -145,7 +145,7 @@ html {
   }
   
   @media only screen and (max-width: 414px) {
-    section.container {
+    main.container {
       max-width:100%;
       padding-left:3px!important;
       padding-right:3px!important;
@@ -168,7 +168,7 @@ html {
     }
   }
   @media only screen and (min-width: 415px) and (max-width: 767px) {
-    section.container {
+    main.container {
       max-width:100%;
       padding-left:100px!important;
       padding-right:100px!important;
@@ -184,7 +184,7 @@ html {
     }
   }
   @media only screen and (min-width: 768px) and (max-width: 1024px) {
-    section.container {
+    main.container {
       max-width:100%;
       padding-left:150px!important;
       padding-right:150px!important;
@@ -192,7 +192,7 @@ html {
     }
   }
   @media only screen and (min-width: 1025px) and (max-width: 1365px) {
-    section.container {
+    main.container {
       max-width:100%;
       padding-left:270px!important;
       padding-right:270px!important;
@@ -200,7 +200,7 @@ html {
     }
   }
   @media only screen and (min-width: 1366px) {
-    section.container {
+    main.container {
       max-width:100%;
       padding-left:450px!important;
       padding-right:450px!important;
