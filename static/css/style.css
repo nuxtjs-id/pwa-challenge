@@ -151,6 +151,13 @@ html {
       padding-right:3px!important;
       padding-bottom:3px!important;
     }
+    .nuxt-navbar {
+      position:fixed!important;
+      left:0;
+      border-radius:0px;
+      width:100%;
+      z-index:10;
+    }
     .btn-search {
       position:absolute;
       right:3px;
