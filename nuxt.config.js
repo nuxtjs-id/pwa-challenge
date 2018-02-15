@@ -30,17 +30,11 @@ module.exports = {
     '@nuxtjs/pwa',
     '@nuxtjs/axios'
   ],
-  css: [
-    './static/css/style.css'
-  ],
   plugins: ['~/plugins/components.js'],
   axios: {
     // proxyHeaders: false
   },
   workbox: {
-    importScripts: [
-      'custom-sw.js'
-    ],
     runtimeCaching: [
       {
         urlPattern: 'https://nuxtjs-pwa.herokuapp.com/.*',
