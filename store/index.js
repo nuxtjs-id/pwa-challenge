@@ -5,7 +5,7 @@ const Store = () => {
     state: {
         dataInit: null,
         activeContent: null,
-        contentLoad: 2,
+        contentLoad: 3,
         isMobile: null,
         scroll: {
           scrolled: false,
