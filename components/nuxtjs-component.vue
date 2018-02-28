@@ -19,12 +19,14 @@ export default {
   mounted () {
     var _self = this
     var el = document.querySelector('.nuxt-loader-' + _self.imgKey)
-    var a = new Image()
-    a.src = _self.img
-    a.onload = function () {
-      el.style.backgroundImage = 'url(' + _self.img + ')'
-      el.classList.add('loaded')
-    }
+    setTimeout(function () {
+      var a = new Image()
+      a.src = _self.img
+      a.onload = function () {
+        el.style.backgroundImage = 'url(' + _self.img + ')'
+        el.classList.add('loaded')
+      }
+    }, 500)
   }
 }
 </script>
