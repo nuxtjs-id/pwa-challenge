@@ -17,9 +17,15 @@ const Store = () => {
         },
     },
     actions: {
-        async nuxtServerInit ({commit}, {app, store}) {
+        async nuxtServerInit ({state, commit}, {app, isDev, req, redirect}) {
             if (process.server) {
-                if (!store.state.datainit) {
+                const hostParts = (req.headers.host || '').replace('.org', '').split('.')
+                console.log(req.connection.encrypted)
+                // if (hostParts.length === 2) {
+                //     if (hostParts[0] === 'www') return redirect(301, 'https://nuxtjs.org' + req.url)
+                //     commit('setLocale', hostParts[0])
+                // }
+                if (!state.datainit) {
                     await app.$axios.$get('https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fmedium.com%2Ffeed%2Fwwwid')
                         .then((res) => {
                             let slug
@@ -29,7 +35,7 @@ const Store = () => {
                                 res.items[i].desc = ' ...'
                                 res.items[i].slug = slug
                             }
-                            store.state.dataInit = res
+                            state.dataInit = res
                         })
                         .catch(e => {
                             console.log('E: ServerInit - ' + e.message)
