@@ -26,7 +26,7 @@ export default {
         el.style.backgroundImage = 'url(' + _self.img + ')'
         el.classList.add('loaded')
       }
-    }, 500)
+    }, 1000)
   }
 }
 </script>

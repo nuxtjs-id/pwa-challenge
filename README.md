@@ -1,7 +1,7 @@
 # NuxtJs_id - WWWID PWA Challenge
 
 > Latihan Iterasi Instant Loading SSR (Versatile VueJs) ...
->> NuxtJs (VueJs, dkk) | SSR (+Api Request) | Minus - http2, https auto redirect, optimasi image load, heroku gratisan :D
+>> NuxtJs (VueJs, dkk) | SSR (+Api Request) | Minus - HTTP/2 (heroku kurang bersahabat), TTFB (lagi2 heroku kurang bersahabat), optimasi custom lazy load (masih PR), heroku gratisan :D
 
 ## Build Setup
 
