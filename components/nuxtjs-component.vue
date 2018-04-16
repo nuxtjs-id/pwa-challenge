@@ -17,13 +17,17 @@
 export default {
   props: ['imgThumb', 'imgKey', 'img', 'url', 'slug', 'title', 'addClass'],
   mounted () {
-    var _self = this
-    var el = document.querySelector('.nuxt-loader-' + _self.imgKey)
-    var a = new Image()
+    let _self = this
+    let a = new Image()
+    let x
     a.src = _self.img
     a.onload = function () {
-      el.style.backgroundImage = 'url(' + _self.img + ')'
-      el.classList.add('loaded')
+      x = setInterval(function () {
+          let el = document.querySelector('.nuxt-loader-' + _self.imgKey)
+          el.style.backgroundImage = 'url(' + _self.img + ')'
+          el.classList.add('loaded')
+          clearInterval(x)
+      }, 5000)
     }
   }
 }
