@@ -2,6 +2,8 @@
 
 > Instant Loading Nuxt SSR (Versatile VueJs) ...
 
+![alt text](https://raw.githubusercontent.com/nuxtjs-id/pwa-challenge/master/static/capture.png)
+
 ## Build Setup
 
 ``` bash
