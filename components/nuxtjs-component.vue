@@ -27,7 +27,7 @@ export default {
           el.style.backgroundImage = 'url(' + _self.img + ')'
           el.classList.add('loaded')
           clearInterval(x)
-      }, 5000)
+      }, 3000)
     }
   }
 }
