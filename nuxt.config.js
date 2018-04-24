@@ -32,9 +32,6 @@ module.exports = {
     '@nuxtjs/component-cache'
   ],
   plugins: ['~/plugins/components.js'],
-  router: {
-    middleware: ['https']
-  },
   axios: {
     // proxyHeaders: false
   },
